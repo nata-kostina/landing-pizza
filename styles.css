@@ -38,6 +38,7 @@
 html {
     -ms-overflow-style: none;
     scrollbar-width: none;
+    overscroll-behavior: none; 
 }
 
 body {

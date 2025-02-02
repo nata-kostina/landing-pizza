@@ -74,14 +74,14 @@ class Navigation {
         this.btnClose = this.navMobile.querySelector(".btn-close");
         window.addEventListener("breakpointChange", this.handleBpChange.bind(this));
         this.btnOpen.addEventListener("click", () => {
+            fixWindow(true);
             overlay?.classList.remove("hidden");
             this.navMobile.classList.add("slided");
-            fixWindow(true);
         })
         this.btnClose.addEventListener("click", () => {
+            fixWindow(false);
             overlay?.classList.add("hidden");
             this.navMobile.classList.remove("slided");
-            fixWindow(false);
         })
     }
 
