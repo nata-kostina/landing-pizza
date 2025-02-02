@@ -268,12 +268,12 @@ function initOrderForm() {
 
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
-        btnSubmit.disabled = true;
         const formData = new FormData(form);
         const result = validateForm(formData);
-
+        
         if (result.isValid) {
             try {
+                btnSubmit.disabled = true;
                 const pendingRequest = () => new Promise((res) => {
                     setTimeout(() => res({ status: "success" }), 1000);
                 }, (rej) => {
