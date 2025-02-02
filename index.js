@@ -165,14 +165,18 @@ function initFeatures(features) {
     })
 }
 
+let timeoutFixWindow;
 
 function fixWindow(type) {
     const htmlElement = document.documentElement;
     if (type) {
-        htmlElement.style.overflow = "hidden";
-        document.body.style.overflow = "hidden";
-        document.body.style.touchAction = "none";
-        document.body.style.pointerEvents = "none";
+        timeoutFixWindow = setTimeout(() => {
+            htmlElement.style.overflow = "hidden";
+            document.body.style.overflow = "hidden";
+            document.body.style.touchAction = "none";
+            document.body.style.pointerEvents = "none";
+        }, 100);
+
     } else {
         htmlElement.style.height = "";
         document.body.style.height = "";
@@ -180,6 +184,9 @@ function fixWindow(type) {
         document.body.style.overflow = "";
         document.body.style.touchAction = "";
         document.body.style.pointerEvents = "";
+        if (timeoutFixWindow) {
+            clearTimeout(timeoutFixWindow);
+        }
     }
 }
 
