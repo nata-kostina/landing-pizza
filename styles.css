@@ -79,28 +79,28 @@ body.hidden {
 /* Typography */
 @font-face {
     font-family: "Muller";
-    src: url("assets/fonts/MullerRegular.ttf") format("ttf");
+    src: url("assets/fonts/MullerRegular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Muller";
-    src: url("assets/fonts/MullerBold.ttf") format("ttf");
+    src: url("assets/fonts/MullerBold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Muller";
-    src: url("assets/fonts/MullerExtraBold.ttf") format("ttf");
+    src: url("assets/fonts/MullerExtraBold.ttf") format("truetype");
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Muller";
-    src: url("assets/fonts/MullerBlack.ttf") format("ttf");
+    src: url("assets/fonts/MullerBlack.ttf") format("truetype");
     font-weight: 900;
     font-style: normal;
 }
