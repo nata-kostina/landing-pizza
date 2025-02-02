@@ -3,7 +3,7 @@
 A fully responsive landing page designed to match the provided pizza-themed layout.
 
 ## 🌐 Deploy
-You can view the deployed version [here]().
+You can view the deployed version [here](https://nata-kostina.github.io/landing-pizza/).
 
 ## 🚀 Features
 
