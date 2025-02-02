@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Cheff</title>
+    <meta name="description" content="Самая вкусная пицца в мире только в Pizza Cheff">
+
+    <link rel="icon" type="image/png" href="/public/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="/public/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Pizza Cheff" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="website">
+
+    <meta property="og:image" content="/public/share.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="1220">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="/public/share.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+</head>
+
+<body class="hidden">
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner main-grid">
+                    <a href="/" class="logo-box">
+                        <img src="/assets/images/logo.png" alt="Pizza Cheff" class="logo-img">
+                        <span class="logo-text">
+                            <span>Pizza</span>
+                            <span>Cheff</span>
+                        </span>
+                    </a>
+                    <nav class="nav nav-desktop"></nav>
+                    <nav class="nav nav-mobile">
+                        <button class="btn btn-icon btn-close">
+                            <svg class="icon" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"
+                                xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490" xmlSpace="preserve">
+                                <polygon
+                                    points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490  489.292,457.678 277.331,245.004 489.292,32.337 " />
+                            </svg>
+                        </button>
+                    </nav>
+                    <button type="button" class="btn btn-hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="section section-intro">
+                <div class="container">
+                    <div class="section__inner">
+                        <h1 class="section__title t1">Самая вкусная пицца в мире<br>
+                            <span class="txt-highlighted">только в Pizza Cheff</span>
+                        </h1>
+                        <div class="features"></div>
+                        <button class="btn btn-primary btn-select t-btn" type="button"
+                            data-anchor="#section-catalogue">Выбрать
+                            пиццу</button>
+                        <div class="section__img-box">
+                            <img class="intro-img" src="/assets/images/pizza_big.png" alt="Пицца">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section-catalogue" class="section section-catalogue">
+                <div class="container">
+                    <div class="section__inner">
+                        <h2 class="section__title t2">Выберите свою любимую пиццу</h2>
+                        <div class="section__content">
+                            <div class="catalogue"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-contacts">
+                <div class="container">
+                    <div class="section__inner">
+                        <div class="section__content main-grid">
+                            <div class="grid__item text">
+                                <h2 class="section__title t2">
+                                    <span class="txt-highlighted">Хватит думать!</span><br>
+                                    Доставим заказ за 30 минут!
+                                </h2>
+                                <p class="section__text t-body">
+                                    Мы гарантированно доставим вашу пиццу за 30 минут с момента оформления заказа. Если
+                                    мы
+                                    опоздаем даже на 1 минуту - вы получаете весь заказ бесплатно и ваучер на скидку на
+                                    следующий заказ. Мы гордимся нашим сервисом и сделаем всё, чтобы наш клиент был
+                                    доволен
+                                    и не остался голодный!
+                                </p>
+                            </div>
+                            <div class="grid__item form">
+                                <form class="form-order">
+                                    <div class="input-group">
+                                        <input class="input input-name" type="text" name="name" placeholder="Ваше имя"
+                                            maxlength="30">
+                                        <span class="input-error input-error-name hidden">test</span>
+                                    </div>
+                                    <div class="input-group">
+                                        <input class="input input-address" type="text" name="address"
+                                            placeholder="Адрес доставки" maxlength="100">
+                                        <span class="input-error input-error-address hidden"></span>
+                                    </div>
+                                    <div class="input-group">
+                                        <input class="input input-phone" type="tel" name="phone" placeholder="Телефон"
+                                            maxlength="15">
+                                        <span class="input-error input-error-phone hidden"></span>
+                                    </div>
+                                    <div class="input-group">
+                                        <button class="btn btn-primary t-btn btn-submit" type="submit">Оформить
+                                            заказ</button>
+                                        <span class="input-error input-error-form hidden"></span>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="grid__item img-box">
+                                <img src="/assets/images/pizza_slice.png" alt="Кусок пиццы" class="img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="overlay hidden"></div>
+        <div class="pop-up">
+            <div class="pop-up__outer">
+                <div class="pop-up__inner">
+                    <div class="pop-up__header">
+                        <button class="btn btn-icon btn-close">
+                            <svg class="icon" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"
+                                xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490" xmlSpace="preserve">
+                                <polygon
+                                    points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490  489.292,457.678 277.331,245.004 489.292,32.337 " />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="pop-up__body">
+                        <span class="pop-up__message t2">Спасибо за заказ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
