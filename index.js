@@ -165,17 +165,14 @@ function initFeatures(features) {
     })
 }
 
-let fixWindowTimeout = 0;
 
 function fixWindow(type) {
     const htmlElement = document.documentElement;
     if (type) {
-        fixWindowTimeout = setTimeout(() => {
-            htmlElement.style.overflow = "hidden";
-            document.body.style.overflow = "hidden";
-            document.body.style.touchAction = "none";
-            document.body.style.pointerEvents = "none";
-        }, 20);
+        htmlElement.style.overflow = "hidden";
+        document.body.style.overflow = "hidden";
+        document.body.style.touchAction = "none";
+        document.body.style.pointerEvents = "none";
     } else {
         htmlElement.style.height = "";
         document.body.style.height = "";
@@ -183,7 +180,6 @@ function fixWindow(type) {
         document.body.style.overflow = "";
         document.body.style.touchAction = "";
         document.body.style.pointerEvents = "";
-        clearTimeout(fixWindowTimeout);
     }
 }
 
@@ -347,6 +343,7 @@ class PopUp {
     }
 
     open(message) {
+        fixWindow(true);
         overlay.style.pointerEvents = "all";
         overlay.addEventListener("click", this.boundedClose);
         overlay?.classList.remove("hidden");
@@ -358,6 +355,7 @@ class PopUp {
     }
 
     close() {
+        fixWindow(false);
         overlay.removeEventListener("click", this.boundedClose);
         overlay.style.pointerEvents = "none";
         overlay?.classList.add("hidden");
