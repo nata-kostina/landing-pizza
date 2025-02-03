@@ -172,6 +172,7 @@ function fixWindow(type) {
     if (type) {
         timeoutFixWindow = setTimeout(() => {
             htmlElement.style.overflow = "hidden";
+            document.body.style.position = "fixed";
             document.body.style.overflow = "hidden";
             document.body.style.touchAction = "none";
             document.body.style.pointerEvents = "none";
