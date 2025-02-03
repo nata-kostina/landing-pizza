@@ -1157,8 +1157,8 @@ a.btn-primary:active {
 /* LightBox */
 .lb-outerContainer {
     width: 90vw !important;
-    height: 90vh !important;
-    height: 90dvh !important;
+    height: 80vh !important;
+    height: 80dvh !important;
 
     display: flex;
     align-items: center;
