@@ -185,6 +185,7 @@ function fixWindow(type) {
         document.body.style.overflow = "";
         document.body.style.touchAction = "";
         document.body.style.pointerEvents = "";
+        document.body.style.position = "static";
         if (timeoutFixWindow) {
             clearTimeout(timeoutFixWindow);
         }
