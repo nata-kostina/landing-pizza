@@ -279,7 +279,7 @@ function initOrderForm() {
         e.preventDefault();
         const formData = new FormData(form);
         const result = validateForm(formData);
-        
+
         if (result.isValid) {
             try {
                 btnSubmit.disabled = true;
@@ -338,7 +338,13 @@ function validateAddress(value) {
 
 function validatePhone() {
     const rawPhone = $(".input-phone").inputmask("unmaskedvalue");
-    return !isInputEmpty(rawPhone) ? { isValid: true } : { isValid: false, message: "Введите телефон" };
+    if (isInputEmpty(rawPhone)) {
+        return { isValid: false, message: "Введите телефон" };
+    }
+    if (rawPhone.length !== 8) {
+        return { isValid: false, message: "Неверный формат" };
+    }
+    return { isValid: true };
 }
 
 
